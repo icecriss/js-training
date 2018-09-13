@@ -7,7 +7,13 @@
  *
  */
 
+function capidtalize(string) {
+    string[0] = string[0].toUpperCase();
+    for (var i = 1; i < string.length; i++) {
+        string[i] = string[i].toLowerCase();
+    }
 
+}
 //* Begin of tests
 const assert = require('assert')
 

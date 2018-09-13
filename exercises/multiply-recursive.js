@@ -10,7 +10,10 @@
  */
 
 // Your code :
+function multiply(n1, n2) {
+    result = result + multiply(n1, n2)
 
+}
 //* Begin of tests
 const assert = require('assert')
 

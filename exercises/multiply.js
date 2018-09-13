@@ -9,7 +9,32 @@
  */
 
 // Your code :
+function multiply(n1, n2) {
+    var result = 0;
+    var n1Abs;
+    var n2Abs;
 
+    if (n1 < 0) {
+        n1Abs = -n1;
+    } else {
+        n1Abs = n1;
+    }
+
+    if (n2 < 0) {
+        n2Abs = -n2;
+    } else {
+        n2Abs = n2;
+    }
+
+    for (var i = 0; i < n2Abs; i++) {
+        result += n1Abs;
+    }
+ 
+    if ( (n1 < 0 && n2 < 0) || (n1 > 0 && n2 > 0) ) {
+        return result;
+    } else if ( (n1 < 0 && n2 > 0) || (n1 > 0 && n2 < 0) ) {
+        return -result;
+}
 //* Begin of tests
 const assert = require('assert')
 

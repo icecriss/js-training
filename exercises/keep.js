@@ -12,6 +12,24 @@
  *
  */
 
+function keepFirst(string) {
+    let shortStringBegin = string[0]+string[1];
+    return shortStringBegin;
+
+};
+
+function keepLast(string) {
+    let shortStringEnd = string[string.length-1]+string[string.length-2];
+    return shortStringEnd;
+
+};
+
+function keepFirstLast(string) {
+    let shortStringThird = string[2]+string[3];
+    return shortStringThird;
+
+};
+
 
 //* Begin of tests
 const assert = require('assert')
