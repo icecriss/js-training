@@ -30,10 +30,11 @@ function multiply(n1, n2) {
         result += n1Abs;
     }
  
-    if ( (n1 < 0 && n2 < 0) || (n1 > 0 && n2 > 0) ) {
+    if ( (n1 <= 0 && n2 <= 0) || (n1 >= 0 && n2 >= 0) ) {
         return result;
     } else if ( (n1 < 0 && n2 > 0) || (n1 > 0 && n2 < 0) ) {
         return -result;
+    }
 }
 //* Begin of tests
 const assert = require('assert')
@@ -50,4 +51,4 @@ assert.strictEqual(multiply(0, 0), 0)
 assert.strictEqual(multiply(123, -22), -2706)
 assert.strictEqual(multiply(-22, 123), -2706)
 assert.strictEqual(multiply(-22, -123), 2706)
-// End of tests */
+//* End of tests

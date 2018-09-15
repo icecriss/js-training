@@ -6,6 +6,13 @@
  *
  */
 
+ function total(array) {
+     let solution = 0;
+     for (let i = 0; i < array.length; i++) {
+         solution += array[i];
+     }
+     return solution;
+ }
 
 //* Begin of tests
 const assert = require('assert')
