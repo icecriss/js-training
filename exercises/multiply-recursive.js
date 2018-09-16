@@ -11,9 +11,36 @@
 
 // Your code :
 function multiply(n1, n2) {
-    result = result + multiply(n1, n2)
+    let result = n1;
 
+
+    if (n1 === 0 || n2 === 0) {
+        return 0;
+    } else if (n1 > 0 && n2 > 0) {
+        if (n2 > 1) {
+            return result += multiply (n1, n2 - 1);
+        }
+        return result;
+    } else if (n1 < 0 && n2 > 0) {
+        if (n2 > 0) {
+            return result += multiply (n1, n2 - 1);
+        }
+        return (result);
+    } else if (n1 < 0 && n2 < 0) {
+        result = -n1
+        if (n2 < 0) {
+            return result += multiply (n1, n2 + 1);
+        }
+        return (result);
+    } else if (n1 > 0 && n2 < 0) {
+        result = -n1;
+        if (n2 < 0) {
+            return result += multiply (n1, n2 + 1);
+        }
+    }
+    
 }
+
 //* Begin of tests
 const assert = require('assert')
 
